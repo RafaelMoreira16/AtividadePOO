@@ -2,9 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-
+// cria classe responsável por criar e configurar a interface gráfica da aplicação
 public class Tela extends JFrame {
-
+// Painel principal onde todos os componentes serão adicionados
     private JPanel painel;
     private JLabel jlFonte, jlTamanho, jlCor;
     private JComboBox<String> jcbFonte, jcbTamanho, jcbCor;
@@ -15,13 +15,13 @@ public class Tela extends JFrame {
     private JScrollPane jspTexto;
 
     private List<Cor> cores;
-
+// Construtor que inicializa as cores, os componentes e configura a janela principal
     public Tela() {
         inicializaCores();
         inicializarComponentes();
         configurarJanela();
     }
-
+// Método que inicializa a lista de cores com objetos da classe "Cor"
     private void inicializaCores() {
         cores = new ArrayList<>();
         cores.add(new Cor("Preto", Color.BLACK));
@@ -34,7 +34,7 @@ public class Tela extends JFrame {
         cores.add(new Cor("Vermelho", Color.RED));
         cores.add(new Cor("Rosa", Color.PINK));
     }
-
+// Método que instancia e configura os componentes que compõem a interface
     private void inicializarComponentes() {
         painel = new JPanel();
         jlFonte = new JLabel("Fonte:");
